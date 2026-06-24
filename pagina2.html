@@ -1,27 +1,47 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
-  <title>Página 2</title>
+  <!-- Optimización para dispositivos móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Contacto - Proyecto Base</title>
+  <!-- Link opcional por si el equipo decide agregar estilos más adelante -->
+  <link rel="stylesheet" href="estilos.css" /> 
 </head>
 
 <body>
-  <h1>Página 2</h1>
-  <p>Contenido a editar por el miembro 2 del equipo.</p>
 
-  <h2>Formulario de contacto</h2>
-  <form action="/enviar" method="post">
-    <label for="nombre">Nombre:</label><br />
-    <input type="text" id="nombre" name="nombre" required /><br /><br />
+  <!-- Barra de navegación para interconectar las páginas -->
+  <header>
+    <nav>
+      <a href="index.html">← Volver al Inicio</a>
+    </nav>
+  </header>
 
-    <label for="correo">Correo electrónico:</label><br />
-    <input type="email" id="correo" name="correo" required /><br /><br />
+  <main>
+    <h1>Formulario de Contacto</h1>
+    <!-- Reemplazo del texto genérico por información del proyecto -->
+    <p>Si tienes dudas, sugerencias o deseas obtener más información sobre nuestro sistema, por favor completa el siguiente formulario y nos pondremos en contacto contigo.</p>
 
-    <label for="mensaje">Mensaje:</label><br />
-    <textarea id="mensaje" name="mensaje" rows="5" cols="40" required></textarea><br /><br />
+    <form action="/enviar" method="post">
+      <fieldset>
+        <legend>Datos Personales</legend>
 
-    <input type="submit" value="Enviar" />
-  </form>
+        <label for="nombre">Nombre completo:</label><br />
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="name" required /><br /><br />
+
+        <label for="correo">Correo electrónico:</label><br />
+        <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" required /><br /><br />
+
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escribe tu mensaje o consulta aquí..." required></textarea><br /><br />
+
+        <!-- Botón moderno y semántico -->
+        <button type="submit">Enviar Formulario</button> 
+      </fieldset>
+    </form>
+  </main>
+
 </body>
 </html>
